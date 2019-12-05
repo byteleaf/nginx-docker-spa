@@ -5,14 +5,16 @@
 To run a SPA (single page application) like a normal angular or react
 app you need to configure your nginx.
 
-Static files should be resolved normally like **_http://loclahost:7000/favicon.ico_** or **_http://localhost:7001/main.94e6abcc6275689efbf2.js_**
+Static files should be resolved normally like
+**_http://localhost:7000/favicon.ico_** or
+**_http://localhost:7001/main.94e6abcc6275689efbf2.js_**
 
-All routes should be redirected to the **_index.html_** of the SPA like
-**_http://loclahost:7000_** or **_http://loclahost:7000/start_**. The
-angular router is resolving the route internal from
-**_http://loclahost:7000_** or **_http://loclahost:7000/start_**!! Be
-careful if some file won't be found, for example a image, the nginx
-config will return the index.html!!
+All routes should be redirected (if no static file for this route was
+found) to the **_index.html_** of the SPA. Examples are routes like
+**_http://localhost:7000_** or **_http://localhost:7000/start_**. The
+angular router is resolving the route internal!! Be careful if some
+static file won't be found, for example a image, the nginx config will
+return the index.html!!
 
 ## Explanation
 
