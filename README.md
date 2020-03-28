@@ -38,4 +38,4 @@ Open cmd in the root level of the project:
 
     >docker container run -p 7000:80 nginx-docker-spa
  
- + You can run app in your browser via **_http://loclahost:7000_**
+ + You can run app in your browser via **_http://localhost:7000_**
